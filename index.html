@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Профессиональный сайт - Главная</title>
+  <meta name="description" content="Профессиональный сайт предоставляющий услуги веб-разработки, дизайна и маркетинга.">
+  <meta name="keywords" content="веб-разработка, дизайн, маркетинг, профессиональный сайт">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Профессиональный сайт">
+  <meta property="og:description" content="Профессиональный сайт предоставляющий услуги веб-разработки, дизайна и маркетинга.">
+  <meta property="og:image" content="assets/images/hero-bg.jpg">
+  <meta property="og:url" content="https://example.com">
+  <meta property="og:type" content="website">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Профессиональный сайт">
+  <meta name="twitter:description" content="Профессиональный сайт предоставляющий услуги веб-разработки, дизайна и маркетинга.">
+  <meta name="twitter:image" content="assets/images/hero-bg.jpg">
+  
+  <!-- Manifest -->
+  <link rel="manifest" href="manifest.json">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" crossorigin="anonymous"></script>
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": "Профессиональный сайт",
+    "url": "https://example.com",
+    "logo": "https://example.com/assets/images/logo.png",
+    "sameAs": [
+      "https://www.facebook.com/example",
+      "https://www.instagram.com/example",
+      "https://twitter.com/example"
+    ]
+  }
+  </script>
+  
+  <link rel="stylesheet" href="assets/css/styles.css">
+  
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+          navigator.serviceWorker.register('sw.js').then(function(registration) {
+              console.log('Service Worker зарегистрирован с областью: ', registration.scope);
+          }, function(err) {
+              console.log('Ошибка регистрации Service Worker: ', err);
+          });
+      });
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <a href="index.html">LOGO</a>
+      </div>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="active">Главная</a></li>
+          <li><a href="about.html">О нас</a></li>
+          <li><a href="services.html">Услуги</a></li>
+          <li><a href="portfolio.html">Портфолио</a></li>
+          <li><a href="contact.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <div>
+        <button id="themeToggle" class="theme-toggle">Темная тема</button>
+        <div class="nav-toggle" id="navToggle">
+          <span class="hamburger"></span>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <main>
+    <section class="hero">
+      <div class="overlay"></div>
+      <div class="container hero-content">
+        <h1 style="opacity:0; transform: translateY(-20px);">Профессиональные решения для вашего бизнеса</h1>
+        <p style="opacity:0; transform: translateY(20px);">Мы создаем инновационные проекты, помогающие вам опережать конкурентов.</p>
+        <a href="about.html" class="btn">Узнать больше</a>
+      </div>
+    </section>
+    <!-- Другие секции можно добавить здесь -->
+  </main>
+  
+  <footer>
+    <div class="container footer-container">
+      <p>&copy; 2025 Профессиональный сайт. Все права защищены.</p>
+    </div>
+  </footer>
+  
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
